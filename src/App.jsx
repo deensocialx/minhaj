@@ -9,6 +9,7 @@ import Night from './pages/Night'
 import Workout from './pages/Workout'
 import Insights from './pages/Insights'
 import Settings from './pages/Settings'
+import Plan from './pages/Plan'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
               <Route path="/night" element={<Night />} />
               <Route path="/workout" element={<Workout />} />
               <Route path="/insights" element={<Insights />} />
+              <Route path="/plan" element={<Plan />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </Layout>

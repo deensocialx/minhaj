@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NAV = [
   {
@@ -59,6 +59,17 @@ const NAV = [
       </svg>
     ),
   },
+  {
+    to: '/plan',
+    label: 'Plan',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" strokeLinecap="round" />
+        <rect x="9" y="3" width="6" height="4" rx="1" />
+        <path d="M9 12h6M9 16h4" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ]
 
 function NavItem({ to, label, icon, vertical = false }) {
@@ -70,7 +81,7 @@ function NavItem({ to, label, icon, vertical = false }) {
         vertical
           ? `flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all text-sm font-medium
              ${isActive ? 'bg-[#1E2A3A] text-[#D4A843]' : 'text-[#6B7A8D] hover:text-[#A0AABB] hover:bg-[#1A2333]'}`
-          : `flex flex-col items-center gap-0.5 px-3 py-1.5 transition-all
+          : `flex flex-col items-center gap-0.5 px-2.5 py-1.5 flex-shrink-0 transition-all
              ${isActive ? 'text-[#D4A843]' : 'text-[#6B7A8D] hover:text-[#A0AABB]'}`
       }
     >
@@ -103,7 +114,7 @@ export default function Layout({ children }) {
         </main>
 
         {/* Bottom nav — tablet/mobile */}
-        <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0F1621] border-t border-[#1A2333] flex items-center justify-around px-2 py-2 z-40 safe-area-inset-bottom">
+        <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0F1621] border-t border-[#1A2333] flex items-center overflow-x-auto px-1 py-1 z-40 safe-area-inset-bottom">
           {NAV.map((item) => (
             <NavItem key={item.to} {...item} />
           ))}
