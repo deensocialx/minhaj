@@ -1,0 +1,18 @@
+{
+  "name": "Minhaj",
+  "short_name": "Minhaj",
+  "description": "Islamic daily lifestyle tracker",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1621",
+  "theme_color": "#0F1621",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
